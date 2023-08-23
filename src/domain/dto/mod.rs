@@ -4,6 +4,7 @@ pub mod permission;
 pub mod role;
 pub mod sign_in;
 pub mod user;
+pub mod news;
 
 pub use auth::*;
 pub use dict::*;
@@ -11,6 +12,7 @@ pub use permission::*;
 pub use role::*;
 pub use sign_in::*;
 pub use user::*;
+pub use news::*;
 
 use serde::{Deserialize, Serialize};
 

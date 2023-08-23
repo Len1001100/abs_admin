@@ -74,3 +74,54 @@ pub struct SysTrash {
     pub data: Option<String>,
     pub create_date: Option<DateTime>,
 }
+
+/// 新闻 - 动态
+#[derive(Clone, Debug, serde::Serialize, serde::Deserialize)]
+pub struct NesMoment {
+    pub id: Option<i32>,
+    pub bigcate: Option<String>,
+    pub user_id: Option<i32>,
+    pub create_date: Option<DateTime>,
+    pub content: Option<String>,
+    pub imgusls: Option<String>,
+    pub imgwidth: Option<i32>,
+    pub imgheight: Option<i32>,
+}
+
+/// 新闻 - 新闻
+#[derive(Clone, Debug, serde::Serialize, serde::Deserialize)]
+pub struct NesNews {
+    pub id: Option<i32>,
+    pub bigcate: Option<String>,
+    pub kindid: Option<String>,
+    pub title: Option<String>,
+    pub digest: Option<String>,
+    pub imgsrc: Option<String>,
+    pub detailstr: Option<String>,
+    pub ptime: Option<String>,
+    pub nid: Option<String>,
+    pub source: Option<String>,
+    pub detailurl: Option<String>,
+    pub create_date: Option<DateTime>,
+}
+
+/// 新闻 - 新闻分类
+#[derive(Clone, Debug, serde::Serialize, serde::Deserialize)]
+pub struct NesNewscate {
+    pub id: Option<i32>,
+    pub bigcate: Option<String>,
+    pub kindids: Option<String>,
+    pub kindnames: Option<String>,
+}
+
+/// 新闻 - 用户
+#[derive(Clone, Debug, serde::Serialize, serde::Deserialize)]
+pub struct NesUser {
+    pub id: Option<i32>,
+    pub bigcate: Option<String>,
+    pub name: Option<String>,
+    pub password: Option<String>,
+    pub salt: Option<String>,
+    pub head_url: Option<String>,
+    pub tel: Option<String>,
+}
